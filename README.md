@@ -15,17 +15,19 @@ During Week 4, I worked on core concepts such as:
 - Call stacks
 - File input and output
 - Manipulating binary data
-- Understanding how audio files are processed at the byte level
+- Working with pixel-based image data
+- Recovering deleted files from raw memory data
 
 These topics helped me shift from simply writing code to understanding **how the computer actually handles that code in memory**.
 
 ## Problem Set Focus
 
 ### Volume
+
 In the **Volume** problem, I worked with a `.wav` audio file and learned how to:
 
 - Read file headers correctly
-- Process audio samples
+- Process 16-bit audio samples
 - Apply a scaling factor to change volume
 - Write the modified data into a new output file
 
@@ -33,7 +35,43 @@ This exercise strengthened my understanding of:
 
 - `fread()` and `fwrite()`
 - `int16_t` and binary file structures
+- Audio represented as numerical sample data
 - The relationship between data representation and real-world output
+
+### Filter
+
+In the **Filter** problem, I implemented image-processing logic in C by applying filters to 24-bit BMP images.
+
+Through this exercise, I practiced:
+
+- Working with 2D arrays
+- Manipulating RGB pixel values
+- Using nested loops to process images
+- Applying transformations to structured image data
+- Creating a temporary copy of image data to safely implement blur logic
+
+The filters I implemented were:
+
+- Grayscale
+- Sepia
+- Horizontal Reflection
+- Blur
+
+This problem helped me understand that images are not just visuals on a screen — they are structured collections of bytes and color values that can be manipulated programmatically.
+
+### Recover
+
+In the **Recover** problem, the goal is to recover deleted JPEGs from a forensic image of a memory card.
+
+This exercise strengthens understanding of:
+
+- Raw data inspection
+- File signatures and format identification
+- Block-based reading with buffers
+- Sequential file recovery
+- Low-level file handling in C
+
+It also connects memory concepts to a practical digital forensics task, showing how deleted files can still be reconstructed from raw binary data.
 
 ## Why this week matters
 
@@ -44,18 +82,21 @@ Before this, I could follow code logic. After this week, I started understanding
 - where variables live in memory
 - how functions interact through the call stack
 - why pointers are powerful
-- how low-level programming requires precision and attention to detail
+- how binary files can be read and modified directly
+- how memory concepts apply to audio, images, and file recovery
 
 This was not just about solving exercises — it was about building a stronger computer science foundation.
 
 ## Skills demonstrated
 
-Through this week's work, I practiced and demonstrated:
+Through this week’s work, I practiced and demonstrated:
 
 - Problem-solving in C
 - Debugging low-level logic
 - Reading and modifying binary files
-- Applying theoretical concepts in practical tasks
+- Manipulating WAV audio samples
+- Processing BMP image data with pixel-level transformations
+- Recovering JPEG files from raw memory data
 - Writing structured and efficient code
 - Developing a deeper understanding of memory management
 
@@ -72,7 +113,7 @@ This repository reflects my commitment to:
 
 ## About CS50
 
-CS50 is Harvard University's introduction to computer science, covering topics such as algorithms, data structures, memory, abstraction, and software engineering.
+CS50 is Harvard University’s introduction to computer science. The course covers topics such as algorithms, data structures, memory, abstraction, and software engineering.
 
 ## Author
 
